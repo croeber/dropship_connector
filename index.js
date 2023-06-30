@@ -29,8 +29,6 @@ express()
     store[id] = req.body
     res.send({
       id: id,
-      data: store[id],
-      params: req.body
     })
   })
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
