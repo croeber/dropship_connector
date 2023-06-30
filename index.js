@@ -15,7 +15,11 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/stub/:id', (req, res) => {
-    res.send(store[req.params.id])
+    if (req.params.id) {
+      res.send(store[req.params.id])      
+    } else {
+      res.send(store)
+    }
   })
 
   .post('/stub/', (req, res) => {
