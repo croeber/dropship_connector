@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-
+const cors = require('cors');
 const PORT = process.env.PORT || 5001
 const store = {
   1: {
@@ -8,6 +8,9 @@ const store = {
   }
 }
 express()
+  .use(cors({
+    origin: '*'
+  }))
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
