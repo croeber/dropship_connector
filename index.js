@@ -26,7 +26,8 @@ express()
     const id = Math.floor((Math.random() * 1000000000) + 1)
     store[id] = req.params
     res.send({
-      id: id
+      id: id,
+      data: store[id]
     })
   })
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
