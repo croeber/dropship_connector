@@ -24,11 +24,11 @@ express()
 
   .post('/stub/', (req, res) => {
     const id = Math.floor((Math.random() * 1000000000) + 1)
-    store[id] = req.params
+    store[id] = req.body
     res.send({
       id: id,
       data: store[id],
-      params: req.params
+      params: req.body
     })
   })
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
