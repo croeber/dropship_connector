@@ -27,7 +27,8 @@ express()
     store[id] = req.params
     res.send({
       id: id,
-      data: store[id]
+      data: store[id],
+      params: req.params
     })
   })
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
