@@ -18,7 +18,9 @@ express()
   .set('view engine', 'ejs')
   .get('/stub/:id', (req, res) => {
     if (req.params.id) {
-      res.send(store[req.params.id])
+      const payload = JSON.parse(JSON.stringify(store[req.params.id]))
+      delete store[req.params.id]
+      res.send(payload)
     } else {
       res.send(store)
     }

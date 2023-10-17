@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../dropship"
+		},
+		{
+			"path": "../laravel-aliexpress-dropship-chrome-extension-master"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
